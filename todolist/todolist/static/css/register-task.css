@@ -1,0 +1,103 @@
+#container-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#container {
+    width: 60vw;
+    max-width: 500px;
+    min-width: 200px;
+    padding: 20px;
+    box-shadow: 1px 1px 6px #ccc;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#form-container {
+    border-radius: 30px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #C4D2F5;
+}
+
+#form-container p label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+textarea,
+input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: all 0.25s;
+    padding: 10px 10px;
+}
+
+textarea:hover,
+input:hover{
+    border: 0.5px solid black;
+    box-shadow: 1px 1px 4px #ccc;
+}
+
+#form-container p input {
+    width: 80%;
+}
+
+p textarea,
+p {
+    width: 98%;
+}
+
+#add-task-label {
+    font-size: 20px;
+    color: black;
+    font-weight: normal;
+}
+
+#container-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    margin-top: 20px;
+    font-family: 'Poppins';
+    list-style: none;
+}
+
+#cancel-btn,
+#container-buttons button {
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#container-buttons #save-btn {
+    background-color: #517FF6;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #517FF6;
+    transition: all 0.25s;
+}
+
+#container-buttons #save-btn:hover {
+    border: 1px solid #4065c5;
+    background-color: #5180f6ed;
+}
+
+#container-buttons #cancel-btn {
+    background-color: transparent;
+    color: grey;
+    transition: background-color 0.5s;
+}
+
+#container-buttons #cancel-btn:hover {
+    background-color: rgb(232, 232, 232);
+    border: 1px solid #ccc;
+}

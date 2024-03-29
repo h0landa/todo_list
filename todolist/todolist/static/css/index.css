@@ -1,0 +1,81 @@
+#container-task {
+    display: grid;
+    grid-template-columns: 1fr 0.1fr;
+    width: 80vw;
+    border-radius: 4px;
+    padding: 15px;
+    background-color: #a6baeb89;
+    box-shadow: 1px 1px 6px #a6baeb89;
+    border: 1px solid #a4bbfaa8;
+    transition: all 0.25s;
+    cursor: default;
+}
+
+#container-task:hover {
+    box-shadow: 2px 2px 8px #a6baebb0;
+    border: 1px solid #87a7ffca;
+}
+
+#container-task input[type='radio'] {
+    width: 15px;
+    cursor: pointer;
+}
+
+#container-task-title {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: 600;
+    color: #293D72;
+}
+
+.vertical-btn{
+    padding: 10px;
+    border-radius: 100%;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+
+#container-vertical-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3px;
+}
+
+#edit-task-btn {
+    background-color: #293D72;
+}
+
+#confirm-task-btn {
+    background-color: #45a049;
+}
+
+#add-task-btn {
+    bottom: 50px;
+    right: 50px;
+    position: absolute;
+    padding: 20px;
+    border-radius: 100%;
+    border: none;
+    background-color: #293D72;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+
+#add-task-btn:hover {
+    background-color: #3b57a3;
+}
+
+#edit-task-btn:hover {
+    background-color: #3b57a3;
+}
+
+#container-description-task {
+    color: #546bab;
+    margin-top: 10px;
+}

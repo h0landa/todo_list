@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="" method="POST">
+    {% csrf_token %}
+    <div id="titulo-delete-confirm">
+        Tem certeza?
+    </div>
+    Tem certeza que deseja excluir "<strong>{{ task.title }}</strong>" ?
+    <div class="container-confirm-btn">
+        <a id="no-btn" href="{% url 'home' %}">Não, voltar</a>
+        <button id="yes-btn" type="submit">Sim, tenho certeza</button>
+    </div>
+</form>
+{% endblock %}

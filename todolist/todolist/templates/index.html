@@ -1,11 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Page Index</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for task in tasks %}
+<div id="container-task">
+    <div id="container-task-title">
+        <span id="task-title">{{ task.title }}</span>
+        <div id="container-description-task">
+            <span>{{ task.description }}</span>
+        </div>
+    </div>
+    <div id="container-vertical-btn">
+        <a href="{% url 'delete_task' task.id %}">
+            <button class="vertical-btn" id="confirm-task-btn">
+                <i class="fa-solid fa-check"></i>
+            </button>
+        </a>
+        <a href="{% url 'update_task' task.id %}">
+            <button class="vertical-btn" id="edit-task-btn">
+                <i class="fa-solid fa-pen"></i>
+            </butto>
+        </a>
+    </div>
+</div>
+{% endfor %}
+    <a href="{% url 'register_task' %}"><button id="add-task-btn"><i class="fa-solid fa-plus"></i></button></a>
+
+{% endblock content %}

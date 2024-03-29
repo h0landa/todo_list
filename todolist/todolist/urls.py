@@ -22,4 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('register_task', views.registerTask, name='register_task'),
+    path('update_task/<str:pk>', views.updateTask, name='update_task'),
+    path('delete_task/<str:pk>', views.deleteTask, name='delete_task'),
 ]

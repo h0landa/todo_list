@@ -1,0 +1,37 @@
+
+#container-confirm-btn button {
+    display: block;
+    margin-top: 10px;
+}
+
+#titulo-delete-confirm {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.container-confirm-btn {
+    margin-top: 20px;
+}
+
+#no-btn,
+.container-confirm-btn button{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    list-style: none;
+    text-decoration: none;
+}
+
+#no-btn {
+    background-color: #747474;
+}
+
+#yes-btn {
+    background-color: #BA2120;
+}
