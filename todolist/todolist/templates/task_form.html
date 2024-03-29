@@ -1,84 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+   <style>
+       body {
+           margin: 0;
+           padding: 0;
+           min-height: 100vh;
+           background: linear-gradient(to bottom, #517FF6, #253663);
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           font-family: 'Poppins';
+       }
+
+
+       #container-wrapper {
+           display: flex;
+           justify-content: center;
+       }
+
+
+       #container {
+           width: 60vw;
+           max-width: 500px;
+           min-width: 200px;
+           padding: 20px;
+           box-shadow: 1px 1px 6px #ccc;
+           background-color: white;
+           border-radius: 20px;
+       }
+
+
+       #form-container {
+           border-radius: 30px;
+           padding: 20px;
+           margin-bottom: 20px;
+           background-color: rgba(255, 255, 255, 0.5);
+       }
+
+
+       p label {
+           display: block;
+           margin-bottom: 10px;
+       }
+
+
+       p input {
+           width: 80%;
+           height: 25px;
+       }
+
+
+       p textarea,
+       p {
+           width: 100%;
+       }
+
+
+       #add-task-label {
+           font-size: 20px;
+           color: black;
+           font-weight: normal;
+       }
+
+
+       #container-buttons {
+           display: flex;
+           justify-content: space-between;
+           gap: 14px;
+           margin-top: 20px;
+           font-family: 'Poppins';
+       }
+
+
+       #container-buttons button {
+           padding: 10px 20px;
+           cursor: pointer;
+           border: none;
+           border-radius: 4px;
+           font-size: 16px;
+           font-weight: 500;
+       }
+
+
+       #container-buttons #save-btn {
+           background-color: #517FF6;
+           color: white;
+           padding: 10px;
+           justify-content: center;
+           align-items: center;
+           text-align: center;
+           border-radius: 4px;
+           font-size: 16px;
+           font-weight: 500;
+       }
+
+
+       #container-buttons #cancel-btn {
+           background-color: transparent;
+           color: grey;
+           transition: background-color 0.5s;
+       }
+
+
+       #container-buttons #cancel-btn:hover {
+           background-color: rgb(232, 232, 232);
+           border: 1px solid #ccc;
+       }
+   </style>
 </head>
-<style>
-
-#container-form {
-    width: 60vw;
-    max-width: 500px;
-    min-width: 200px;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 1px 1px 6px #ccc;
-}
-
-p label {
-    display: block;
-    margin-bottom: 10px;
-}
-
-p input {
-    width: 80%;
-    height: 25px;
-}
-
-p textarea,
-p {
-    width: 100%;
-}
-
-#titulo-form {
-    font-size: 24px;
-}
-
-#container-buttons {
-    display: flex;
-    justify-content: space-between;
-    gap: 14px;
-    width: 100%;
-}
-
-#container-buttons button{
-    padding: 10px 20px;
-    cursor: pointer;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-#container-buttons #cancel-btn {
-    background-color: transparent;
-    color: grey;
-    transition: background-color 0.5s;
-}
-
-#container-buttons #cancel-btn:hover {
-    background-color: rgb(232, 232, 232);
-    border: 1px solid #ccc;
-}
-
-#container-buttons #save-btn {
-    background-color: rgb(38, 103, 255);
-    color: white;
-}
-
-</style>
 <body>
-    <div id="container-form">
-        <div id="titulo-form">Nova Tarefa</div>
-        {{form.as_p}}
-        <div id="container-buttons">
-            <button id="cancel-btn">Voltar</button>
-            <button id="save-btn" type="submit">Salvar</button>
-        </div>
-    </div>
+   <div id="container-wrapper">
+       <div id="form-container">
+           <div id="container">
+               <form>
+                   <label id="add-task-label" for="task">Adicionar tarefa:</label>
+                   <p>
+                       <label for="task">Título:</label>
+                       <input type="text" id="task" name="task" placeholder="Nome da task que você irá realizar.">
+                   </p>
+                   <p>
+                       <label for="description">Descrição:</label>
+                       <textarea id="description" name="description" placeholder="Uma pequena descrição da task."></textarea>
+                   </p>
+                   <div id="container-buttons">
+                       <button id="cancel-btn">Voltar</button>
+                       <button id="save-btn" type="submit">Salvar</button>
+                   </div>
+               </form>
+           </div>
+       </div>
+   </div>
 </body>
 </html>
